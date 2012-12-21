@@ -1,0 +1,40 @@
+Jon Morehouse 
+Assignment 1 Documentation
+
+Agenda:
+
+1.) Running, horizontal scrolling game
+2.) The idea is to auto generate hills that the user has to fly the small ship over
+3.) Hitting the top of the game or hitting a mountain results in game over
+4.) Print the score to the user 
+
+Implementation:
+
+Classes:
+
+	Utilities -- general, this is a requirement for windows so it is accessible anywhere
+
+	Window -- responsible for controlling the terminal with curses screen
+
+	Colored Window -- extends window and is responsible for controlling colored window
+
+	Hill -- this is the basic hill - it is a self contained element that generates a random hill height / width and creates the coordinates necessary
+
+	Game ground -- this is the game ground generator -- responsible for controlling all of the hills and making them move left 
+
+	Character -- this is the character element -- it is responsible for controlling the character and creating the proper coordinates for its different pieces
+
+	Game_controller -- this is a singleton - like class (not fully implemented), but the idea is to have only one instance. this controls the game and all that goes on with it.
+
+Current Status:
+
+	run make -f game.make to compile the game
+	test.cpp -- class tests -- these are not complete right now
+
+	game runs correctly -- but the game ground lags - because of the curses implementation
+		-currently, we are redrawing each element
+		-future implementation will be to create windows for each hill and then move the windows left
+
+		
+	
+	
